@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>verifyprimenumber</title>
+</head>
+<body>
+	<label>ENTER THE NUMBER</label>
+<input type="text" id="input">
+<button onclick="verifypn()">VERIFY PRIME NUMBER</button>
+<button onclick="refresh()">REFRESH</button>
+<p id="output"></p>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+	function verifypn(){
+
+		var val= document.getElementById('input').value;
+        var flag=0;
+
+       if(val>3 && val%3 ==0 && val%2 ==0){
+        flag=1;
+       }
+       
+        if(val<=1){
+        	document.getElementById("output").innerHTML="PRIME NUMBER IS ALWAYS GREATER THAN 1";
+        	flag=2;
+         }
+
+
+        if(flag == 0){
+        	document.getElementById("output").innerHTML="PRIME NUMBER";
+        }
+        
+      
+      else if(flag==1){
+      	      document.getElementById("output").innerHTML="NOT A PRIME NUMBER";}
+  }
+
+
+  function refresh(){
+  	document.getElementById("output").innerHTML="";
+    document.getElementById("input").value="";
+  }
+
+</script>
+
+</html>
